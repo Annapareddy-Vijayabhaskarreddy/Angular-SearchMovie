@@ -1,0 +1,39 @@
+<br><div class="container" >
+    <div class="row">
+        <div class="col-md-6 mb-4 " *ngFor="let item of getNote"   >
+            <div class="card " style="max-width: 540px;">
+                <div class="row" >
+                  <div class="col-md-4">
+                    <img src="{{item.Poster}}"  alt="..." style="width: 130%;">
+                  </div>
+                  <div class=" col-md-8 " >
+                    <div class="card-body "style="margin-left: 45px;">
+                      <h5 class="card-title">{{item.Title}}</h5>
+                      <p class="card-text">Actors: {{item.Actors}}</p>
+                      <p class="card-text">Dircror: {{item.Director}}</p>
+                      <p class="card-text">Genre: {{item.Genre}}</p>
+                      <p class="card-text">Year: {{item.Year}}</p>
+                      <p class="card-text">Released: {{item.Released}}</p>
+                      <p class="card-text">Runtime: {{item.Runtime}}</p>
+                      <p class="card-text">Language: {{item.Language}}</p>
+                      <p class="card-text">Awards: {{item.Awards}}</p>
+                      <p class="card-text">Country: {{item.Country}}</p>
+                      <p class="card-text">Plot: {{item.Plot}}</p>
+                      <p class="card-text">Rating: {{item.Rating}}</p><br>                   
+                      <ngb-rating [max]="10" [(rate)]="starRatingg" [readonly]="false"></ngb-rating>
+                      <button (click)=DeleteMovieList(item) class="btn " type="button">
+                        <i class="fas fa-trash-alt  text-danger"></i></button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+   
+       
+ 
